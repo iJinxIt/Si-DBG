@@ -12,7 +12,8 @@ Compile ELF with Compiler-Flags as needed. (e.g. -O0 for no optimizations and -g
 
 ### Start st-util server
 $ st-util
-### Connect GDB
+
+### Connect to it with GDB
 $ gdb \[programm-name\].elf
 
 (gdb) target extended-remote :4242
@@ -29,3 +30,22 @@ $ gdb \[programm-name\].elf
 (gdb) info registers //For CPU
 
 (gdb) x/1xw \[address-to-other-registers\]
+
+## Debugging with OpenOCD
+### Start OpenOCD server
+$ openocd -f interface/stlink.cfg -f target/stm32g0x.cfg
+
+### Connect to it with telnet
+$ telnet localhost 4444
+
+\> halt
+
+\> reg
+
+\> mdw \[addr\] //memory display word
+
+\> mww \[addr\] //memory write word
+
+\> step
+
+\> resume
