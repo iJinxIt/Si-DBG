@@ -1,0 +1,7 @@
+# Folders
+.vscode
+.gdb_history
+
+# Binaries
+*.bin
+*.elf

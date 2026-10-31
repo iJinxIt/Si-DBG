@@ -2,7 +2,7 @@ CC 		= arm-none-eabi-gcc
 OBJCOPY = arm-none-eabi-objcopy
 SIZE	= arm-none-eabi-size
 
-CFLAGS = -mcpu=cortex-m0plus -mthumb -Os -g -Wall -ffreestanding
+CFLAGS = -mcpu=cortex-m0plus -mthumb -O0 -g3 -Wall -ffreestanding
 LDFLAGS = -T link.ld -nostdlib -Wl,--gc-sections
 
 all: blinky.bin
