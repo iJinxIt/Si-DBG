@@ -1,0 +1,26 @@
+.header{
+    color: lightblue;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px black solid;
+    background-color: lightblue;
+    height: 2.5em;
+    
+}
+main{
+  flex-grow: 1;
+}
+.footer{
+  justify-content: end;
+  flex-direction: column;
+  background-color: lightgreen;
+  
+}
+
+.navbar-button{
+  border: 1px black solid;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 0.5em;
+}
